@@ -1,11 +1,7 @@
-import { Button } from "@/components/ui/button"
+import Home from "@/pages/Home"
 
 function App() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <Button>Click Me !!</Button>
-    </div>
-  )
+  return <Home/>
 }
 
 export default App

@@ -1,4 +1,4 @@
-import { Blog } from "@/types/blog"
+import type { Blog } from "@/types/blog"
 
 const BASE_URL = "http://localhost:3001"
 
