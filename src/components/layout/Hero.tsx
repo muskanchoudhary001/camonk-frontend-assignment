@@ -8,11 +8,11 @@ export default function BlogHero({
   subtitle = "Stay updated with the latest trends in finance, accounting, and career growth",
 }: BlogHeroProps) {
   return (
-    <section className="text-center mb-14">
-      <h1 className="text-4xl font-bold text-gray-900">
+    <section className="text-center mb-24 mt-20">
+      <h1 className="text-6xl font-bold text-gray-900">
         {title}
       </h1>
-      <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+      <p className="mt-3 text-gray-600 text-l max-w-2xl mx-auto">
         {subtitle}
       </p>
     </section>
