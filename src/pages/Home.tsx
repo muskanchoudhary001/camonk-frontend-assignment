@@ -1,22 +1,29 @@
-import BlogList from "@/components/BlogList"
-import BlogDetails from "@/components/BlogDetails"
-import { useState } from "react"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
+import BlogLayout from "@/components/layout/BlogLayout"
+import BlogList from "@/components/blog/BlogList"
+import BlogDetails from "@/components/blog/BlogDetails"
+import { useQuery } from "@tanstack/react-query"
+import { getBlogs } from "@/lib/api"
 
 export default function Home() {
-    const [selectedId, setSelectedId] = useState<number | null>(null)
+  const { data } = useQuery({
+    queryKey: ["blogs"],
+    queryFn: getBlogs,
+  })
 
-    return (
-        <div className="grid grod-cols-1 md:grid-cols-3 gap-4 p-6">
-            <div className="md:col-span-1">
-                <BlogList onSelect={setSelectedId} />
-            </div>
+  if (!data) return null
 
-            <div className="md:col-span-2">
-                {selectedId ? (< BlogDetails blogId={selectedId} />) : (
-                    <p className="text-muted-foreground">Select a blog to view details.</p>
-                )}
-            </div>
-        </div>
-    )
+  return (
+    <>
+      <Navbar />
 
+      <BlogLayout
+        sidebar={<BlogList />}
+        content={<BlogDetails blog={data[0]} />}
+      />
+
+      <Footer />
+    </>
+  )
 }
