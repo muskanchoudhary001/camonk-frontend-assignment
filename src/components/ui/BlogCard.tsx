@@ -11,10 +11,16 @@ export default function BlogCard({ blog, onClick }: BlogCardProps) {
       onClick={onClick}
       className="
         group cursor-pointer
-        rounded-2xl border border-gray-200 bg-white
-        p-5 shadow-sm
+        rounded-2xl
+        border border-blue-100
+        bg-white p-5
+
+        shadow-sm
         transition-all duration-300
-        hover:-translate-y-1 hover:shadow-xl
+
+        hover:-translate-y-1
+        hover:border-blue-300
+        hover:shadow-[0_10px_30px_rgba(37,99,235,0.12)]
       "
     >
       {/* CATEGORY CHIPS */}
