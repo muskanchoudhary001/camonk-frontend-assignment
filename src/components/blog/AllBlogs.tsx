@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import BlogCard from "@/components/ui/blogcard"
+import BlogCard from "@/components/ui/BlogCard"
 import type { Blog } from "@/types/blog"
 
 export default function AllBlogs() {
@@ -21,7 +21,7 @@ export default function AllBlogs() {
   }
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
+    <section className="max-w-7xl mx-auto px-4 py-10 mt-28">
       <h1 className="text-4xl font-bold text-blue-600 mb-8">
         All Blogs
       </h1>
