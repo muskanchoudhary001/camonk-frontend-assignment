@@ -4,7 +4,9 @@ import BlogPage from "@/pages/BlogPage"
 import Navbar from "./components/layout/Navbar"
 import Footer from "./components/layout/Footer"
 import CreateBlogForm from "./components/blog/CreateBlogForm"
+import AllBlogs from "./components/blog/AllBlogs"
 import PageNotFound from "./pages/PageNotFound"
+ 
 
 export default function App() {
   return (
@@ -14,8 +16,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs/:id" element={<BlogPage />} />
+        <Route path="/allblogs" element={<AllBlogs />} />
         <Route path="/createblog" element={<CreateBlogForm />} />
-         <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       <Footer />
